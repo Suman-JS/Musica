@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/nowplaying"
+    android:hapticFeedbackEnabled="true"
+    tools:context=".NowPlaying">
+
+    <ImageView
+        android:id="@+id/imageView2"
+        android:layout_width="256dp"
+        android:layout_height="314dp"
+        android:layout_marginTop="36dp"
+        android:contentDescription="@string/album_art"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.496"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/logo" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="44dp"
+        android:ellipsize="marquee"
+        android:fadingEdge="horizontal"
+        android:fontFamily="@font/ubuntu"
+        android:marqueeRepeatLimit="marquee_forever"
+        android:scrollHorizontally="true"
+        android:singleLine="true"
+        android:text="@string/textview"
+        android:textColor="@color/white"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView2" />
+
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="333dp"
+        android:layout_height="77dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="150dp"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.4"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <ImageView
+            android:id="@+id/previous"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:contentDescription="@string/previous"
+            android:hapticFeedbackEnabled="true"
+            app:srcCompat="@drawable/previous"
+            tools:ignore="ImageContrastCheck" />
+
+        <ImageView
+            android:id="@+id/play"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:contentDescription="@string/play"
+            android:hapticFeedbackEnabled="true"
+            app:srcCompat="@drawable/pause" />
+
+        <ImageView
+            android:id="@+id/next"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:contentDescription="@string/next"
+            android:hapticFeedbackEnabled="true"
+            app:srcCompat="@drawable/next" />
+    </LinearLayout>
+
+    <SeekBar
+        android:id="@+id/seekBar"
+        android:layout_width="331dp"
+        android:layout_height="36dp"
+        android:layout_marginBottom="104dp"
+        android:progressBackgroundTint="#F7F3F3"
+
+        app:layout_constraintBottom_toTopOf="@+id/linearLayout"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <LinearLayout
+        android:layout_width="372dp"
+        android:layout_height="48dp"
+        android:layout_marginBottom="48dp"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.8"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <ImageView
+            android:id="@+id/shuffle"
+            android:layout_width="176dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            app:srcCompat="@drawable/shuffle"
+            android:contentDescription="@string/shuffle" />
+
+        <ImageView
+            android:id="@+id/loop"
+            android:layout_width="176dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            app:srcCompat="@drawable/repeat_off"
+            android:contentDescription="@string/loop" />
+    </LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>
